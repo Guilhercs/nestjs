@@ -1,8 +1,6 @@
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-import {
-  FastifyAdapter,
-  NestFastifyApplication,
+import { NestFactory } from '@nestjs/core'
+import { AppModule } from './app.module'
+import { FastifyAdapter, NestFastifyApplication,
 } from '@nestjs/platform-fastify';
 
 async function bootstrap() {
@@ -12,4 +10,4 @@ async function bootstrap() {
   );
   await app.listen(3000, '0.0.0.0');
 }
-bootstrap();
+bootstrap()
