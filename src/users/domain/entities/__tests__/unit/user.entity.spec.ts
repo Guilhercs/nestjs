@@ -31,5 +31,19 @@ describe("UserEntity", () => {
     expect(sut.props.createdAt).toEqual(props.createdAt)
   })
 
+  it('should update name when update is called', () => {
+    const newName = 'Guilherme';
 
+    sut.update(newName);
+
+    expect(sut.props.name).toStrictEqual(newName);
+  })
+
+  it('should update password when updatePassword is called', () => {
+    const newName = 'banana123';
+
+    sut.updatePassword(newName);
+
+    expect(sut.props.password).toStrictEqual(newName);
+  })
 })
